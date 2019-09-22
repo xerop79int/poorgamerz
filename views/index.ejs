@@ -1,0 +1,47 @@
+<% include partials/header.ejs %>
+
+<div class="container">
+	<div class="index-header">
+	    <h3>Download games from Poor GamerZ</h3>
+    </div>
+	  
+	<div class="index-container">
+		<div class="cards-container">
+	    <% game.forEach(function(game){ %>
+		<a class="card" href="/games/<%= game._id %>">	
+	     <div class="each-card">
+			 
+			<div>
+		        <img src="<%= game.image %>" />
+			</div>
+			<div class="title">
+				<%= game.title%>
+			</div>
+			    <!-- <div class="description">
+			    <%- game.requirement.substring(0, 50).toUpperCase() %>
+			    </div> --> 
+		    </div>
+		</a>
+			<% }) %>
+		</div>
+			
+		<% include partials/button.ejs %>
+	 </div>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% include partials/footer.ejs %>

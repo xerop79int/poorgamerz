@@ -1,0 +1,44 @@
+<% include partials/header.ejs %>
+
+ <div class="show-container">
+	  <div class="show-image">
+		<img  src="<%= game.image %>" >
+		<a href="<%=game.url%>" class="show-btn" target="_blank">Download Torrent</a>	 
+	 </div>
+	 
+	 <div class="show-content-container">
+		<div class="show-title">
+			<%= game.title.toUpperCase() %>
+		</div>
+		<div class="requirement">
+			<h4>System Requirement:</h4>
+			<p><%- game.requirement %></p>
+		</div>
+		<div class="description">
+			<h4>Description:</h4>
+			<p><%- game.description %></p>
+		</div>
+		 
+		<div>
+	          <h2 class="row">In-Game Images:</h2>
+              <div>
+                <img src="<%= game.img1 %>" width="500rem" >
+              </div>
+		      <div>
+                <img src="<%= game.img2 %>"  width="500rem">
+              </div> 
+		      <div>
+                <img src="<%= game.img3 %>" width="500rem">
+              </div> 
+		</div>
+		 
+		 
+	 </div>
+	 
+	 <% include partials/button.ejs %>
+	 
+</div>
+
+
+
+<% include partials/footer.ejs %>

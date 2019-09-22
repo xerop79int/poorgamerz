@@ -1,0 +1,43 @@
+<% include partials/header.ejs %>
+
+ <div class="new-container">
+	 <div class="new-heading">Edit Game Post</div>
+	 <form action="/games/<%= game._id %>?_method=PUT" method="POST">
+		<div>			 
+			 <input type="text" name="game[title]" value="<%= game.title %>"/>
+		</div>
+		<div>			 
+			 <input type="text" name="game[image]" value="<%= game.image %>"/>
+		</div>
+		<div>
+			<input type="text" name="game[genre]" value="<%= game.genre %>"/>
+		</div>
+		<div>			 
+			 <input type="text" name="game[url]" value="<%= game.url %>"/>
+		</div>
+		<div>			 
+			 <textarea name="game[requirement]" ><%= game.requirement %></textarea>
+		</div>
+		<div>			 
+			 <textarea name="game[description]" ><%= game.description %></textarea>
+		</div>
+		<div>
+			 <input type="text" name="game[img1]" value="<%= game.img1 %>"/>
+		</div>
+	    <div>
+			 <input type="text" name="game[img2]" value="<%= game.img2 %>"/>
+		</div>
+		<div>
+			 <input type="text" name="game[img3]" value="<%= game.img3 %>"/>
+		</div>
+		<input class="new-btn" type="submit"/>
+	 </form>
+</div>
+
+
+
+
+
+
+
+<% include partials/footer.ejs %>

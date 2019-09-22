@@ -1,0 +1,43 @@
+<% include partials/header.ejs %>
+
+ <div class="new-container">
+	 <div class="new-heading">New Game Post</div>
+	 <form action="/games" method="POST">
+		 <div>
+			 <input type="text" name="game[title]" placeholder="Title"/>
+		 </div>
+		 <div>
+			 <input type="text" name="game[image]" placeholder="Image"/>
+		 </div>
+		<div>
+			<input type="text" name="game[genre]" placeholder="Genre"/>
+		</div>
+		  <div>
+			 <input type="text" name="game[url]" placeholder="URL"/>
+		 </div>
+		 <div>
+			 <textarea name="game[requirement]" placeholder="Games Requirement"></textarea>
+		 </div>
+		 <div>
+			 <textarea name="game[description]" placeholder="Games Description"></textarea>
+		 </div>
+		 <div>
+			 <input type="text" name="game[img1]" placeholder="URL"/>
+		 </div>
+		 <div>
+			 <input type="text" name="game[img2]" placeholder="URL"/>
+		 </div>
+		 <div>
+			 <input type="text" name="game[img3]" placeholder="URL"/>
+		 </div>
+		 <input class="new-btn" type="submit"/>
+	 </form>
+</div>
+
+
+
+
+
+
+
+<% include partials/footer.ejs %>
