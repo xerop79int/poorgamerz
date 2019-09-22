@@ -97,7 +97,7 @@ app.get("/games/new",function(req,res){
 
 app.post("/games", function(req,res){
 	
-	const newbody = req.body.game.toLowerCase();
+	const newbody = req.body.game;
 
 	Game.create(bodygame,function(error, newGame){
 		if(error){
@@ -148,7 +148,7 @@ app.get("/games/:id/edit", function(req,res){
 
 app.put("/games/:id", function(req,res){
 	   
-	const updatebody = req.body.game.toLowerCase();
+	const updatebody = req.body.game;
 
 	Game.findByIdAndUpdate(req.params.id, updatebody, function(error, updategame){
 		if(error){
