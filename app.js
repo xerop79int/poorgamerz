@@ -97,8 +97,9 @@ app.get("/games/new",function(req,res){
 
 app.post("/games", function(req,res){
 	
-	
-	Game.create(req.body.game,function(error, newGame){
+	const newbody = req.body.game.toLowerCase();
+
+	Game.create(bodygame,function(error, newGame){
 		if(error){
 		    console.log(error);     
 	    }
@@ -146,7 +147,10 @@ app.get("/games/:id/edit", function(req,res){
          //       Update Route  (RESTful Route-6)
 
 app.put("/games/:id", function(req,res){
-	Game.findByIdAndUpdate(req.params.id, req.body.game, function(error, updategame){
+	   
+	const updatebody = req.body.game.toLowerCase();
+
+	Game.findByIdAndUpdate(req.params.id, updatebody, function(error, updategame){
 		if(error){
 			console.log(error);
 		}
